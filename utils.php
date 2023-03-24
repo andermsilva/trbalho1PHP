@@ -4,7 +4,8 @@ function menu(){
     <li> <a href='index.php'> Home </a></li>
     <li><a href='exerc1.php'>Exercício 1</a></li>
     <li><a href='exerc2.php'>Exercício 2</a></li>
-    <li><a href='#'>Contatos </a></li>
+    <li><a href='exerc3.php'>Exercício 3 </a></li>
+    <li><a href='exerc4.php'>Exercício 4 </a></li>
     <li><a href='#'>Sobre Nós </a></li>
     
     </ul>";
