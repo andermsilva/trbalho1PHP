@@ -3,6 +3,8 @@ include('utils.php');
 $alert = null;
 $msg = "";
 $tr = 0;
+$cor="";
+$place_a ="";
 
 if (isset($_GET['calc'])) {
     $v =  $_GET['valor'];
@@ -29,7 +31,7 @@ if (isset($_GET['calc'])) {
             $alert = true;
             $tr = $_v - $_p;
             
-            $msg = "<div class='alert alert-danger' role='alert'>";
+            $msg = "<div class='alert alert-warning' role='alert'>";
             $msg .= "<p>Não foi possivel realizar o pagamento.<br />";
             $msg .= "Valor devido R$ ".number_format($tr,2,',','.')."</p> </div>";
         } else{
@@ -40,6 +42,13 @@ if (isset($_GET['calc'])) {
 
         
 
+    }else{
+        $alert = false;
+        $msg = "<div class='alert alert-danger' role='alert'>";
+        $msg .= "<p>Preencha todos os campos...<br />";
+        $msg .= "Ex.: 12,50</p></div>";
+        $cor = "alert-danger";
+       
     }
 }
 
@@ -66,18 +75,21 @@ if (isset($_GET['calc'])) {
     <h2 class="centralizar text-primary">Exercício 1</h2>
     <main>
         <div class="menu_v">
-
+            
             <?php 
                 echo menu();
-            ?>
+                ?>
         </div>
-
+        
         <section class="section_form">
+            <h4 class="centralizar text-secondary">Troco certo</h4>
             <form>
                 <div class="mb-3">
                     <div class="form-text"></div>
                     <label for="valor" class="form-label"> Valor entregue R$</label>
-                    <input type="text" class="form-control" name="valor" id="valor">
+                    <input type="text" class="form-control text-end alert-danger" name="valor" id="valor" 
+                
+                    >
 
                 </div>
                 <div class="mb-3">
@@ -99,6 +111,8 @@ if (isset($_GET['calc'])) {
                 if (!is_null($alert)) {
                     if($alert){
                         echo $msg;
+                    }else{
+                      echo  $msg;
                     }
 
                 }

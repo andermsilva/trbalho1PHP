@@ -49,13 +49,14 @@ if (isset($_GET['calc'])) {
     <h2 class="centralizar text-primary">Exercício 2</h2>
     <main>
         <div class="menu_v">
-
+            
             <?php 
                 echo menu();
-            ?>
+                ?>
         </div>
-
+        
         <section class="section_form">
+            <h4 class="centralizar text-secondary">Peso x Quantidade</h4>
             <form>
                 <div class="mb-3">
                     <div class="form-text"></div>

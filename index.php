@@ -31,9 +31,8 @@ include('utils.php');
         <section>
         <?php
        
-          
-      
-            ?>
+  
+              ?>
         </section>
         <section>
 

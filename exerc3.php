@@ -12,14 +12,18 @@ if (isset($_GET['enviar'])) {
         
 
         if($_num > 10){
-            $resposta = "O valor $_num é maior que 10(dez).";
+            $resposta = "O valor $_num é maior que 10 (dez).";
             $text_color = "text-success";
         }else if($_num < 10){
             
-            $resposta = "O valor $_num é menor que 10(dez).";
+            $resposta = "O valor $_num é menor que 10 (dez).";
             $text_color = "text-danger";
             
         }
+    }else{
+        $resposta = "Informe numeros diferente de 0 (zero)";
+        $text_color = "text-info";
+
     }
 }
 
@@ -46,13 +50,14 @@ if (isset($_GET['enviar'])) {
     <h2 class="centralizar text-primary">Exercício 3</h2>
     <main>
         <div class="menu_v">
-
+            
             <?php
             echo menu();
             ?>
         </div>
-
+        
         <section class="section_form">
+            <h4 class="centralizar text-secondary">Maior ou menor que 10 (dez)</h4>
             <form>
                 <div class="mb-3">
                     <div class="form-text"></div>

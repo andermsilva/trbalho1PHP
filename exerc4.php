@@ -5,20 +5,19 @@ $msg = "";
 
 $resposta = null;
 if (isset($_GET['enviar'])) {
-    $_num =  $_GET['numero'];
-      
-    if (!empty($_num) && is_numeric($_num) || $_num==0) {
-       
-        if($_num > 0){
+    // $_num =  $_GET['numero'];
+    $_num = format_numero_float($_GET['numero']);
+    if (!empty($_num) && is_numeric($_num) || $_num == 0) {
+
+        if ($_num > 0) {
             $resposta = "O valor é maior que 0(zero).";
             $text_color = "text-success";
-        }else if($_num < 0){
-           
+        } else if ($_num < 0) {
+
             $resposta = "O valor é menor que 0(zero).";
             $text_color = "text-danger";
-            
-        }else{
-            
+        } else {
+
             $resposta = "O valor é igual a 0(zero).";
             $text_color = "text-primary";
         }
@@ -55,28 +54,27 @@ if (isset($_GET['enviar'])) {
         </div>
 
         <section class="section_form">
+            <h4 class="centralizar text-secondary">Positivo ou negativo</h4>
             <form>
                 <div class="mb-3">
                     <div class="form-text"></div>
                     <label for="numero" class="form-label"> Informe um numero.</label>
-                    <input type="text" class="form-control " name="numero" id="valor"><br />
+                    <input type="text" class="form-control " name="numero" id="numero"><br />
 
                     <button type="submit" class="btn btn-primary" name="enviar" value="1">Enviar</button> &nbsp;
                 </div>
                 <div class="mb-3">
                     <label for="result" class="form-label">Resposta</label>
-                    <input type="text" 
-                            class="form-control <?=$text_color?>" id="result" readonly
-                            value="<?=$resposta?>">
+                    <input type="text" class="form-control <?= $text_color ?>" id="result" readonly value="<?= $resposta ?>">
                 </div>
 
                 <a href="exerc4.php">
                     <button type="button" class="btn btn-secondary">Reset</button>
                 </a>
             </form>
-           <?php 
+            <?php
             $zero;
-           ?>
+            ?>
         </section>
 
     </main>
