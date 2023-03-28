@@ -9,6 +9,9 @@ function menu()
     <li><a href='exerc4.php'>Exercício 4 </a></li>
     <li><a href='exerc5.php'>Exercício 5 </a></li>
     <li><a href='exerc6.php'>Exercício 6 </a></li>
+    <li><a href='exerc7.php'>Exercício 7 </a></li>
+    <li><a href='exerc8.php'>Exercício 8 </a></li>
+    <li><a href='exerc9.php'>Exercício 9 </a></li>
     <li><a href='#'>Sobre Nós </a></li>
     
     </ul>";
