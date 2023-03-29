@@ -71,13 +71,17 @@ li a {
     text-decoration: none;
     color: #b4bff7;
 }
-
+.ss{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 ._alert {
     width: 70.5%;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 a:hover {
 

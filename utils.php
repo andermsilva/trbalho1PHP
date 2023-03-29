@@ -14,8 +14,8 @@ function menu()
     <li><a href='exerc9.php'>Exercício 9 </a></li>
     <li><a href='exerc10.php'>Exercício 10 </a></li>
     <li><a href='exerc11.php'>Exercício 11 </a></li>
-    <li><a href='#'>Sobre Nós </a></li>
-    
+    <li><a href='exerc12.php'>Exercício 12 </a></li>
+    <li><a href='exerc13.php'>Exercício 13 </a></li>
     </ul>";
 }
 //==================================================\\
